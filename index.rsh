@@ -59,7 +59,7 @@ export const main = Reach.App(()=>{
         Player1.publish(player1Finger,saltPlayer1Finger,saltPlayer1Guess, player1Guess).timeout(relativeTime(deadline),()=>closeTo(Player2,informTimeOut));
         checkCommitment(commitPlayer1Finger, saltPlayer1Finger, player1Finger);
         checkCommitment(commitPlayer1Guess, saltPlayer1Guess, player1Guess);
-        outcome = (player1Finger > player2Finger) ? 0 : (player1Finger < player2Finger) ? 1 : 2
+        outcome = (player1Guess==(player1Finger + player2Finger)) ? 0 : (player2Guess==(player1Finger + player2Finger)) ? 1 : 2;
         continue;
     }
     

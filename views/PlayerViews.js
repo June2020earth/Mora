@@ -61,11 +61,11 @@ exports.WaitingForResults = class extends React.Component {
 
 exports.Done = class extends React.Component {
   render() {
-    const {outcome} = this.props;
+    const {result} = this.props;
     return (
       <div>
         Thank you for playing. The outcome of this game was:
-        <br />{outcome || 'Unknown'}
+        <br />{result || 'Unknown'}
       </div>
     );
   }
